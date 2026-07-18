@@ -1,23 +1,5 @@
 """
 Absensi.py
-==========
-Modul Absensi Melody Violin School — MENGGANTIKAN JadwalKursus.py.
-
-Berisi 2 tab:
-  1. Absensi Murid  — daftar murid aktif, sesi terakhir, sisa sesi,
-                       tombol "+ Tambah Les Baru" & "View Detail"
-                       (tandai Hadir / Tidak Hadir per sesi).
-  2. Absensi Admin   — riwayat jam masuk / jam pulang staf admin,
-                       diinput MANUAL lewat tombol "+ Tambah Absensi"
-                       (data tetap disimpan di tabel kehadiran_admin;
-                       tidak lagi tercatat otomatis dari login.py/main.py).
-
-Struktur data (tabel) TIDAK berubah dari sebelumnya — jadwal_sesi,
-pendaftaran_kursus, kehadiran_admin tetap dipakai apa adanya, supaya
-Pembayaran.py (gaji guru berbasis sesi 'Terlaksana') & LaporanKeuangan.py
-tidak perlu diubah sama sekali. Yang berubah hanya TAMPILAN & ALUR KERJA:
-dari "mengelola jadwal" (buat/reschedule/kirim pengingat WA) menjadi
-"mencatat kehadiran" (tandai Hadir/Tidak Hadir).
 """
 
 import sys
