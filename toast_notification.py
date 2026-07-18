@@ -1,20 +1,5 @@
 """
 toast_notification.py
-=====================
-Komponen notifikasi toast reusable untuk Melody Violin School.
-
-Cara pakai:
-    from toast_notification import show_toast
-
-    # Muncul dekat button yang dipencet
-    show_toast(self, "Berhasil", "Data Berhasil Disimpan", "success", anchor=btn)
-
-    # Tanpa anchor → pojok kanan bawah window
-    show_toast(self, "Gagal", f"Gagal: {str(e)}", "error")
-    show_toast(self, "Perhatian", "Field kosong!", "warning")
-
-Semua jenis hilang otomatis setelah 5 detik.
-Bisa juga ditutup dengan klik ✕.
 """
 
 from PyQt5.QtWidgets import (
