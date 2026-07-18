@@ -1,16 +1,3 @@
-"""
-theme.py — Sumber tunggal (single source of truth) untuk palet warna,
-style sidebar, komponen PageHeader (breadcrumb halaman), dan fitur
-accessibility perbesar/perkecil teks (Ctrl +/-/0) yang dipakai di
-seluruh modul MVS (DashboardAdmin, DashboardOwner, DataMurid, DataGuru,
-DataAdmin, Absensi, Pembayaran, LaporanKeuangan, Pengaturan, dll).
-
-File ini dibuat ulang karena file theme.py yang asli hilang/tidak
-ter-upload. Nilai warna & ukuran di sini disesuaikan dengan yang
-sebelumnya sudah dipakai (hardcoded) di file-file dashboard, supaya
-tampilan tetap konsisten dengan sebelumnya.
-"""
-
 import os
 import re
 import sys
@@ -22,17 +9,7 @@ from PyQt5.QtWidgets import QWidget, QLabel, QVBoxLayout, QShortcut, QComboBox
 
 
 def resource_path(relative_path: str) -> str:
-    """
-    Cari lokasi asset read-only yang dibundle (mis. mvs.png, ttd_gm.png).
-
-    - Saat dijalankan sebagai .exe/.app hasil PyInstaller (sys.frozen == True),
-      asset yang dibundle lewat --add-data diekstrak ke folder sementara
-      sys._MEIPASS, bukan ke folder tempat file .py aslinya berada.
-    - Saat dijalankan sebagai script biasa (python main.py), tetap cari di
-      folder project seperti biasa.
-
-    Pakai fungsi ini untuk semua asset gambar/ikon yang ikut dibundle,
-    supaya tetap ketemu baik saat development maupun setelah di-compile.
+  ap ketemu baik saat development maupun setelah di-compile.
     """
     base = getattr(sys, "_MEIPASS", os.path.dirname(os.path.abspath(__file__)))
     return os.path.join(base, relative_path)
